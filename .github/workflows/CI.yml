@@ -27,17 +27,17 @@ jobs:
        #check the version used 
       - name: Install dependencies 
         run: 
-          python3 -m pip install --upgrade pip
+          py -3 -m pip install --upgrade pip
           pip install flask 
           pip -r requirements.txt
       - name: Install virtual python environment 
         run: 
-          python3 -m venv ./venv 
+          py -3 -m venv ./venv 
           source .venv/bin/activate 
           
       - name: Execute py script 
         run: 
-          python3 helloworld.py 
+          py -3 helloworld.py 
       #- name: execute python API 
         #un: |
         #  python3 api.py 
