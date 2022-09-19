@@ -25,15 +25,15 @@ jobs:
       # Checks-out your repository content
       - uses: actions/checkout@v3
        #check the version used 
+      - name: Install virtual python environment 
+        run: 
+          py -3 -m venv ./venv 
+          source .venv/bin/activate 
       - name: Install dependencies 
         run: 
           py -3 -m pip install --upgrade pip
           pip install flask 
           pip -r requirements.txt
-      - name: Install virtual python environment 
-        run: 
-          py -3 -m venv ./venv 
-          source .venv/bin/activate 
           
       - name: Execute py script 
         run: 
