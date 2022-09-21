@@ -56,12 +56,16 @@ jobs:
       - uses: actions/checkout@v3
       - name: Test with Bandit 
         run:
-          bandit -r helloworld.py app.py
+          bandit -r helloworld.py 
+          bandit -r app.py
   safety-check:
     needs: build 
     runs-on: [ self-hosted ]
     steps:
       - uses: actions/checkout@v3
+      - name: Install safety
+        run: 
+          python3 -m pip install safety
       - name: Test with Safety for dependances 
         run: 
           safety check 
