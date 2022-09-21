@@ -65,12 +65,9 @@ jobs:
       - name: Install safety
         run: 
           python3 -m pip install safety
-      - name: change path 
-        run: 
-          export PATH="$HOME/.local/bin:$PATH"
       - name: run safety 
         run: 
-          safety check 
+          /home/alixand/.local/bin/safety check 
   snyk_check:
     needs: build
     runs-on: [ self-hosted ]
