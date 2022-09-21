@@ -32,7 +32,6 @@ jobs:
       - name: Install dependencies 
         run: 
           python3 -m pip install --upgrade pip
-          pip install flask 
           pip -r requirements.txt
           
       - name: Execute py script 
