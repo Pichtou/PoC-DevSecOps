@@ -1,6 +1,4 @@
 #API creation 
-from flask import Flask, jsonify, abort
-
 days = [
     {"id": 1, "name": "Monday"},
     {"id": 2, "name": "Tuesday"},
