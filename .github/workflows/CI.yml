@@ -67,6 +67,7 @@ jobs:
           python3 -m pip install safety
       - name: Test with Safety for dependances 
         run: 
+          export PATH="$HOME/.local/bin:$PATH"
           safety check 
   snyk_check:
     needs: build
