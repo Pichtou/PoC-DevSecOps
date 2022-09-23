@@ -57,27 +57,5 @@ jobs:
       - name: Test with Bandit 
         run:
           bandit -r app.py
-  safety-check:
-    needs: build 
-    runs-on: [ self-hosted ]
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install safety
-        run: 
-          python3 -m pip install safety
-      - name: run safety 
-        run: 
-          /home/alixand/.local/bin/safety check 
-  snyk_check:
-    needs: build
-    runs-on: [ self-hosted ]
-    steps:
-      - uses: actions/checkout@master
-      #- name: Run Snyk to check for vulnerabilities
-        #uses: snyk/actions/python-3.8@master
-      - name: Snyk
-        uses: snyk/actions@0.3.0
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-
+  
 
