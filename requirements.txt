@@ -35,7 +35,7 @@ stevedore==4.0.0
 toml==0.10.2
 tomli==2.0.1
 urllib3==1.26.12
-Werkzeug==2.2.2
+Werkzeug==3.0.1
 attrs==22.1.0
 bandit==1.7.4
 build==0.8.0
@@ -73,4 +73,4 @@ stevedore==4.0.0
 toml==0.10.2
 tomli==2.0.1
 urllib3==1.26.12
-Werkzeug==2.2.2
+Werkzeug==3.0.1
